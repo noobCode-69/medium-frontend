@@ -1,0 +1,144 @@
+.article-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+}
+.article-parent-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-metadata  {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgrey;
+    flex-shrink: 0;
+
+}
+
+.article-metadata-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.article-metadata-profileImg {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.article-metadata-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.article-metadata-right a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-metadata-right a svg {
+    width: 100%;
+    height: 100%;
+    fill: rgb(40,40,40);
+}
+
+
+.article-content {
+    overflow-y: scroll;
+    padding: 2rem ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.article-content::-webkit-scrollbar {
+    width: 0 !important
+}
+.article-content {
+    overflow: -moz-scrollbars-none;
+}
+
+
+.article-content{
+    -ms-overflow-style: none;
+}
+
+.article-title {
+    text-align: justify;   
+}
+
+
+.article-paragraph {
+    width: 90%;
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+
+.underline {
+    border-bottom: 1px solid lightgrey;
+}
+
+
+.article-img {
+    height: 300px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 500px) {
+    .article-metadata{
+        padding: 0.5rem;
+    }
+    .article-content {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    .article-title{
+        font-size: 1.5rem;
+        text-align: left;
+        word-spacing: 5px;
+        
+    }
+    .article-paragraph{
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .article-metadata-right {
+        display: none;
+    }
+
+    .article-img {
+        width: 100%;
+        height: 200px;
+    }
+
+}

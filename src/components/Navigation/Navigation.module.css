@@ -1,0 +1,19 @@
+.navigation-container {
+    /* outline: 1px solid red; */
+    border-bottom: 1px solid lightgrey;
+}
+
+.navigation-links {
+    display: flex;
+    gap: 1.5rem;
+    padding-left: 2rem;
+    /* outline: 1px solid red; */
+}
+
+
+.navigation-link {
+    padding-bottom: 1rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+}

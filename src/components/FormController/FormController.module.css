@@ -1,0 +1,17 @@
+.form-controller {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.form-controller label {
+    min-width: 100px;
+}
+.form-controller input {
+    max-width: 350px;
+    padding:  0.5rem 0.5rem;
+    flex-grow: 1;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+}
+
+

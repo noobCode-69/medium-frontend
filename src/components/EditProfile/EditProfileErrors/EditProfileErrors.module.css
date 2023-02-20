@@ -1,0 +1,13 @@
+.errors-container {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-left: 1rem;
+}
+
+@media (max-width : 700px) {
+    .errors-container {
+        gap: 0.5rem;
+    }
+}

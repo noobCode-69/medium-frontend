@@ -1,0 +1,65 @@
+
+.element-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem;
+}
+
+
+.article-image-container {
+    width: 100%;
+}
+
+.no-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.no-image-container textarea {
+    padding: 0.5rem ;
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: inherit;
+    resize: none;
+    height: 50px;
+    border: 1px solid lightgrey;
+    outline: none;
+}
+
+
+.no-image-container textarea::-webkit-scrollbar {
+    width: 0 !important
+}
+.no-image-container textarea {
+    overflow: -moz-scrollbars-none;
+}
+
+
+.no-image-container textarea{
+    -ms-overflow-style: none;
+}
+
+.article-image-submit-button {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 500px;
+    padding: 0.5rem 0.9rem;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.article-image-submit-button:hover{
+    cursor: pointer;
+}
+
+
+.article-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}

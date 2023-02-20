@@ -1,0 +1,137 @@
+
+
+.feed_item {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    border-bottom: 1px solid lightgrey;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+}
+
+
+
+.feed_metadata {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+    padding-bottom: 1rem;
+}
+
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+
+.feed_timestamp {
+    color: lightgrey;
+}
+
+
+
+
+.feed_data {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    text-align: justify;
+}
+
+
+.feed-item-article-url {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.feed-item-article-url img {
+    width: 100%;
+    height: 100%;
+}
+
+.feed_data_left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: flex-start;
+
+}
+
+.feed_title {
+    letter-spacing: 0;
+}
+
+.feed_description{
+    font-size: 0.95rem;
+
+}
+
+.feed_icons {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feed_icon_like  {
+    width: 24px ;
+    height: 24px; 
+}
+
+
+.feed_icon_read {
+    display: flex;
+    padding: 7px 16px;
+    background-color: #202124;
+    color: white ;
+    font-family: 'Merriweather', serif;
+    border-radius: 500px;
+    font-size: 0.8rem;
+
+}
+.feed_icon_read a {
+    color: white;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .feed_description {
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+    .feed_data {
+        gap: 0.5rem;
+    }
+    .feed_title {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    .feed_description {
+        display: none;
+    }
+    .feed_data_left{
+        align-self: center;
+    }
+    .feed_metadata{
+        padding-bottom: 0;
+    }
+    .feed_item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+   
+    
+}

@@ -1,0 +1,31 @@
+.element-container{
+    display: flex;
+}
+.article-heading {
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    font-family: inherit;
+    resize: none;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+
+.element-container {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.element-container textarea {
+    padding: 0 1rem;
+}
+
+.element-container textarea:focus {
+    outline: 3px dotted black;
+}
