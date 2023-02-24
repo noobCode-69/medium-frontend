@@ -38,7 +38,7 @@ const Login = () => {
       <div className={style["login-info"]}>
         <h1 className={style["login-title"]}>We Missed You..</h1>
         <p className={style["login-subtitle"]}>
-          Medium help you to share you knowledge to the world. signup to don't
+          Medium help you to share you knowledge to the world. login to don't
           miss the opportunity to learn new things everyday.
         </p>
       </div>

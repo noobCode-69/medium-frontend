@@ -237,6 +237,8 @@ const Article = () => {
     });
   };
 
+  
+
   return (
     <div className={style['article-parent-container']}>
       {isLoading == true ? (
