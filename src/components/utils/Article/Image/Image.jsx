@@ -6,9 +6,13 @@ import { updateElement, deleteElement } from "../../../../redux/action";
 
 const Image = ({ index, value, updateElement, deleteElement }) => {
   const [imageUrl, setImageUrl] = useState(value);
-
+  const [isHovering, setIsHovering] = useState(false);
   return (
-    <div className={style["element-container"]}>
+    <div
+      className={style["element-container"]}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       <div className={style["article-image-container"]}>
         {value == "" ? (
           <div className={style["no-image-container"]}>
@@ -31,7 +35,7 @@ const Image = ({ index, value, updateElement, deleteElement }) => {
           <img src={value} className={style["article-image"]} />
         )}
       </div>
-      <DeleteElement index={index}/>
+      {isHovering && <DeleteElement index={index} />}
     </div>
   );
 };

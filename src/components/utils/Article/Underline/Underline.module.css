@@ -1,13 +1,14 @@
 .article-underline{
     border-bottom: 2px solid lightgrey;
-    height: 0;
-    width: 100%;
+    margin-right: auto;
+    width: calc(100% - 1.5rem - 25px);   
 }
 
 .article-underline-container{
-    padding: 12px 24px;
+    height: calc(25px + 1rem);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
+    gap: 1rem;
 }

@@ -1,6 +1,6 @@
 .article-element-delete-container {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,3 +17,5 @@
 .article-element-delete-container svg:hover{
     cursor: pointer;
 }
+
+/* 1.5rem + 25px */

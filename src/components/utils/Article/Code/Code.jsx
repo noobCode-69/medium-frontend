@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Code.module.css";
 import { connect } from "react-redux";
 import { updateElement, deleteElement } from "../../../../redux/action";
 import CodeEditor from "@uiw/react-textarea-code-editor";
 import DeleteElement from "../DeleteElement/DeleteElement";
 const Code = ({ index, value, updateElement, deleteElement }) => {
+  const [isHovering, setIsHovering] = useState(false);
+
   const handleChange = (e) => {
     updateElement(index, e.target.value);
   };
 
   return (
-    <div className={style["element-container"]}>
+    <div
+      className={style["element-container"]}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       <CodeEditor
         language="js"
         padding={24}
@@ -18,7 +24,8 @@ const Code = ({ index, value, updateElement, deleteElement }) => {
         placeholder="Please Enter JS Code."
         style={{
           // borderStyle: "dashed",
-          width : "100%",
+          marginRight: "auto",
+          width: "calc(100% - 1.5rem - 25px)",
           flexShrink: 1,
           fontSize: window.innerWidth < "500" ? 15 : 15,
           backgroundColor: "#202124",
@@ -26,7 +33,7 @@ const Code = ({ index, value, updateElement, deleteElement }) => {
             "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
         }}
       />
-      <DeleteElement index={index}/>
+      {isHovering && <DeleteElement index={index} />}
     </div>
   );
 };

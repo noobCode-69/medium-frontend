@@ -4,11 +4,13 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0.5rem;
+    gap: 1rem;
 }
 
 
 .article-image-container {
-    width: 100%;
+    margin-right: auto;
+    width: calc(100% - 1.5rem - 25px);   
 }
 
 .no-image-container {
@@ -16,7 +18,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    padding: 1rem 0;
+    
 }
 
 .no-image-container textarea {
