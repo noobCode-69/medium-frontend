@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -53,7 +53,10 @@
   width: 50px;
 }
 
-
+.stats svg {
+  width: 40px;
+  height: 40px;
+}
 
 .articles-container {
   flex-grow: 1;
