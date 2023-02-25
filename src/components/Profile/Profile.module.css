@@ -1,6 +1,6 @@
 .profile-parent-container {
-  max-width: 1000px;
-  margin-left: auto;
+  max-width: 900px;
+  margin-left: 10rem;
   margin-right: auto;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
@@ -49,23 +49,11 @@
 }
 
 .stats {
-  border-radius: 10px;
-  outline: 1px solid lightgrey;
-  display: grid;
-  grid-template-columns: 125px 125px;
   margin-left: auto;
-  margin-right: 1rem;
+  width: 50px;
 }
 
-.stats-controller {
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
 
-.stats-info {
-  font-weight: bold;
-}
 
 .articles-container {
   flex-grow: 1;
@@ -176,6 +164,13 @@
   color: white;
 }
 
+
+@media (max-width : 1000px) {
+  .profile-parent-container {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .article-description {
     display: none;
@@ -192,4 +187,5 @@
   .profile-name {
     font-size: 1.5rem;
   }
+  
 }

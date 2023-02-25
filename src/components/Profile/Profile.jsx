@@ -80,6 +80,8 @@ const Profile = () => {
         <Loading message="Please Wait, while we are fetching data" />
       ) : (
         <div className={style["profile-container"]}>
+
+
           <div className={style["profile-info"]}>
             <img className={style["profile-img"]} src={data.profileImg} />
             <div className={style["profile-info-left"]}>
@@ -87,45 +89,39 @@ const Profile = () => {
               <p className={style["profile-joining-date"]}>
                 Member since, {data.joiningDate}
               </p>
-              <Link className={style['edit-profile-button']} to="/edit-profile">Edit</Link>
-
+              <Link className={style["edit-profile-button"]} to="/edit-profile">
+                Edit
+              </Link>
             </div>
-            <div className={style["stats"]}>
-              <div className={`${style["stats-controller"]} ${style["br"]}` } >
-                <p className={style["stats-info"]}>{data.likesCount}</p>
-                <p className={style["stats-title"]}>Likes</p>
-              </div>
-              <div className={`${style["stats-controller"]} ${style["bl"]}` }>
-                <p className={style["stats-info"]}>{data.articleCount}</p>
-                <p className={style["stats-title"]}>Articles</p>
-              </div>
-              <div className={`${style["stats-controller"]} ${style["tr"]}` }>
-                <p className={style["stats-info"]}>{data.followersCount}</p>
-                <p className={style["stats-title"]}>Followers</p>
-              </div>
-              <div className={`${style["stats-controller"]} ${style["tl"]}`}>
-                <p className={style["stats-info"]}>{data.followingCount}</p>
-                <p className={style["stats-title"]}>Following</p>
-              </div>
-            </div>
+            <Link to={"/"} className={style["stats"]}>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 6.5c-.414 0-.75.336-.75.75v5.5c0 .414.336.75.75.75s.75-.336.75-.75v-5.5c0-.414-.336-.75-.75-.75zm-.002-3c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z" />
+              </svg>
+            </Link>
           </div>
 
           <div className={style["articles-container"]}>
             {data.articles.map((article) => {
               return (
-                <div
-                  className={style["article"]}
-                >
+                <div className={style["article"]}>
                   <div className={style["article-left"]}>
                     <h2 className={style["article-title"]}>{article.title}</h2>
                     <p className={style["article-description"]}>
                       {article.description}
                     </p>
-                    <div className={style['buttons-container']}>
-                      <Link className={`${style['button']} ${style['button-read']}`} to="/article/1">Read</Link>
-                      <button className={`${style['button']} ${style['button-delete']}`} >Delete</button>
+                    <div className={style["buttons-container"]}>
+                      <Link
+                        className={`${style["button"]} ${style["button-read"]}`}
+                        to="/article/1"
+                      >
+                        Read
+                      </Link>
+                      <button
+                        className={`${style["button"]} ${style["button-delete"]}`}
+                      >
+                        Delete
+                      </button>
                     </div>
-
                   </div>
                   <div className={style["article-right"]}>
                     <img src={article.articleImgUrl} />
